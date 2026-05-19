@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TasteBite Restaurant</title>
+  <style>
+    :root {
+      --bg: #fff8f0;
+      --primary: #c44536;
+      --dark: #2d1e1e;
+      --light: #ffffff;
+      --accent: #f8b500;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1500&q=80") center/cover no-repeat;
+      color: var(--light);
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 0 8% 80px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #222;
+      padding: 12px 26px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: var(--primary);
+    }
+
+    .about {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .menu-item {
+      background: var(--light);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    .menu-item h3 {
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #ffe9d2;
+      border-radius: 12px;
+      padding: 40px 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2d1e1e;
+      color: #eee;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">TasteBite</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <h1>Delicious Food, Warm Ambience</h1>
+      <p>
+        Welcome to TasteBite Restaurant. Fresh ingredients, rich flavors, and a cozy atmosphere for your perfect meal.
+      </p>
+      <a class="btn" href="#menu">Explore Menu</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="about">
+      TasteBite is a family-friendly restaurant serving traditional and modern dishes.
+      Our chefs prepare every meal with love, quality ingredients, and authentic taste.
+    </p>
+  </section>
+
+  <section id="menu">
+    <h2 class="section-title">Popular Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Chicken Biryani</h3>
+        <p>Fragrant rice with spicy chicken and herbs.</p>
+        <strong>Rs. 450</strong>
+      </div>
+      <div class="menu-item">
+        <h3>BBQ Platter</h3>
+        <p>Juicy grilled chicken, kebabs, and sauces.</p>
+        <strong>Rs. 850</strong>
+      </div>
+      <div class="menu-item">
+        <h3>Cheese Pizza</h3>
+        <p>Wood-fired crust with rich mozzarella topping.</p>
+        <strong>Rs. 700</strong>
+      </div>
+      <div class="menu-item">
+        <h3>Chocolate Lava Cake</h3>
+        <p>Soft cake with warm melted chocolate center.</p>
+        <strong>Rs. 350</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2 class="section-title">Food Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80" alt="Dish 1" />
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=700&q=80" alt="Dish 2" />
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=80" alt="Dish 3" />
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?auto=format&fit=crop&w=700&q=80" alt="Dish 4" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <p><strong>Address:</strong> Main Food Street, Lahore</p>
+      <p><strong>Phone:</strong> +92 300 1234567</p>
+      <p><strong>Email:</strong> hello@tastebite.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 TasteBite Restaurant. All rights reserved.</p>
+  </footer>
+</body>
+</html>
